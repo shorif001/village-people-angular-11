@@ -1,0 +1,13 @@
+.gallery{
+    background-color: #eff6ff;
+    padding: 50px 100px;
+}
+
+.box{
+    background-color: #fff;
+    padding: 10px 10px;
+    text-align: center;
+}
+.box img{
+  height: 200px;
+}

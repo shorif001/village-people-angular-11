@@ -1,0 +1,13 @@
+.joinnow{
+    background-color: #eff6ff;
+    padding: 140px 100px;
+}
+.login{
+    background-color: #fff;
+    padding: 50px 30px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #CED4DA;
+  }

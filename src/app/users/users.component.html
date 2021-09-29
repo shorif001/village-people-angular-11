@@ -1,0 +1,55 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+
+            <form #userForm="ngForm"> 
+                <div class="form-group">
+                    <label>Enter User Name</label>
+                    <p><input type="text"  name="username" [(ngModel)]="userObj.username"></p>
+                </div>
+                <div class="form-group">
+                    <label>Enter age</label>
+                    <p><input type="text" name="age" [(ngModel)]="userObj.age"></p>
+                </div>
+                <div class="form-group">
+                    <label>Enter address</label>
+                    <p><input type="text" name="address" [(ngModel)]="userObj.address"></p>
+                </div>
+                <div class="form-group">
+                    <label>Enter password</label>
+                    <p><input type="password"  name="password" [(ngModel)]="userObj.password"></p>
+                </div>
+                <button type="button" (click)="userCreate()" *ngIf="!isEdit">Add User</button>
+                <button type="button"  *ngIf="isEdit" (click)="updateUser()">Update</button>
+            </form>
+        </div> 
+
+        <div class="col-md-6 offset-md-1">
+            <h4>User List</h4>
+            <div>
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <th>id</th>
+                        <th>UserName</th>
+                        <th>Age</th>
+                        <th>Address</th>
+                        <th>Password</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let user of uservalue; index as id">
+                            <td>{{id+1}}</td>
+                            <td>{{user.username}}</td>
+                            <td>{{user.age}}</td>
+                            <td>{{user.address}}</td>
+                            <td>{{user.password}}</td>
+                            <td><button (click)="onUpdate(user, id)">Edit</button></td>
+                            <td><button (click)="onRemove(id)">Delete</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

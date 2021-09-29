@@ -1,0 +1,34 @@
+<section class="joinnow">
+    <div class="login col-lg-4 m-auto shadow-lg">
+        <form>
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fas fa-envelope"></i>
+              </span>
+            </div>
+            <input type="text" class="form-control" placeholder="Enter Email">
+            <small class="form-text text-danger w-100">Please Enter Email</small>
+          </div>
+
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">
+                <i class="fas fa-lock"></i>
+              </span>
+            </div>
+            <input type="password" class="form-control" placeholder="Enter Password">
+            <small class="form-text text-danger w-100">Please Enter Password</small>
+          </div>
+
+            <button type="submit" class="btn btn-primary col-lg-12">Login</button>
+          </form>
+          
+          <p class="md-0">{{loginMode?'Don`t have account?':'Already have account?'}}
+            <a routerLink="#" (click)="onModeSwitch()">
+              {{loginMode?'Create one':'Sign In'}}
+            </a></p>
+          <a routerLink="#">Forgot Password</a>
+    </div>
+</section> 

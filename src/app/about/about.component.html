@@ -1,0 +1,149 @@
+<section class="about container">
+    <h1 class="text-center mb-5">Interpolation</h1>
+    
+    
+    <h1>{{variable}}</h1>
+    
+    <h2>{{getName()}}</h2>
+    <h2>{{thisMethod()}}</h2>
+    
+
+<button (click)="nameEvent()">Click Me</button>
+<br>
+
+    <input type="text" (keyup)="myEvent('Keyup event')" placeholder="type something and See results at console">
+
+    <br><br><br>
+    <input type="text" #box (keyup)="myEvent(box.value)" placeholder="get input value">
+  
+    <br><br>
+    <input type="text" placeholder={{name}}>
+
+<br><br>
+
+<h2 *ngIf="show else elseBlock">
+    This is if block <br> Showing text because. variable = true.
+</h2>
+
+<ng-template #elseBlock>
+    <h1>This is else block.</h1>
+</ng-template>
+
+
+<h2 *ngIf="show1=='yes' else elseBlock">
+when variable string
+</h2>
+
+<ng-template #elseBlock>
+    <h1>This is else block.</h1>
+</ng-template>
+
+<!-- if else -->
+
+<ng-template [ngIf]="show=='red'">
+    <h1>[ngIf]="show=='red'" Red block</h1>
+</ng-template>
+<ng-template [ngIf]="show=='green'">
+    <h1>[ngIf]="show=='green'" green block</h1>
+</ng-template>
+<ng-template [ngIf]="show=='blue'">
+    <h1>[ngIf]="show=='blue'" blue block</h1>
+</ng-template>
+
+<!-- switchcase -->
+
+<div [ngSwitch]="colors">
+    <h2 style="color: red;" *ngSwitchCase="'red'">
+        This is SwitchCase red color.
+    </h2>
+    <h2 style="color: green;" *ngSwitchCase="'green'">
+        This is SwitchCase green color.
+    </h2>
+    <h2 style="color: blue;" *ngSwitchCase="'blue'">
+        This is SwitchCase blue color.
+    </h2>
+</div>
+
+
+<!-- For Loop in Angular -->
+
+<h3 *ngFor="let item of data">
+{{item}}
+</h3>
+<br><br>
+
+
+<table border=3>
+    <th>name</th>
+    <th>ID</th>
+    <th>Email</th>
+
+    <tr *ngFor="let item of data1">
+        <td>{{item.name}}</td>
+        <td>{{item.id}}</td>
+        <td>{{item.email}}</td>
+    </tr>
+</table>
+
+<!-- Simple form in anular -->
+<br><br>
+<h3>Simple form in angular</h3>
+
+<form #simpleForm="ngForm" (ngSubmit)="getValue(simpleForm.value)">
+    <input type="text" ngModel name="username" placeholder="Enter your user name">
+    <br><br>
+    <input type="text" ngModel name="age" placeholder="Enter your age">
+    <br><br>
+    <input type="text" ngModel name="address" placeholder="Enter your address">
+    <br><br>
+    <input type="password" ngModel name="password" placeholder="Enter your password">
+    <br><br>
+    <button>get form value</button>
+</form>
+
+
+<!-- style binding in angular -->
+<br><br>
+<h2>style binding in angular</h2>
+
+<h2 style="color: green;">This is style binding color</h2>
+
+<h2 [style.color]="color">This is style binding color</h2>
+<button (click)="getColor()">click me and get color</button>
+
+<br><br>
+
+<h2 [style.color]="change?'red':'green'">color change</h2>
+<button (click)="getColorChange()">click me for color change</button>
+
+<br><br>
+<!-- pipe -->
+<h2>pipe</h2>
+
+{{aboutName|uppercase}} <br>
+{{aboutName|titlecase}}<br>
+{{today |date}} <br>
+{{today |date:'fullDate'}} <br>
+{{str | slice:2:7}} <br>
+{{money | currency:'USD'}} <br>
+
+
+<!-- services -->
+
+
+
+
+
+
+
+
+
+    <br><br><br><br><br>
+    
+    <div class="follow text-center">
+       <h3>Follow Us</h3>
+        <a href="#">Facebook</a>
+        <a href="#">Facebook</a>
+        <a href="#">Facebook</a>
+    </div>
+    </section>

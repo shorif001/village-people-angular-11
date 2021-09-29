@@ -1,0 +1,28 @@
+.home img{
+    width: 100%;
+    height: auto;
+    object-position: center;
+    object-fit: cover;
+}
+
+.homecontent{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.homecontent h1{
+color: rgb(0, 0, 0);
+
+
+}
+
+.homecontent a{
+    margin-top: 20px;
+    
+    }
+
+    .peopleHead{
+        background-color: #eff6ff;
+    }

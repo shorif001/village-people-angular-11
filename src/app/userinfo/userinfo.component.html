@@ -1,0 +1,28 @@
+<section class="peopleinfo">
+    <h2 class="peopleHead mt-3 text-center">This is Village People Information with api jsonplaceholder</h2>
+<div class="container">
+    <div class="info mt-4">
+        <table class="table table-bordered table-hover text-center" >
+            <thead>
+                <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Address</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let udata of userData">
+                    <td>{{udata.id}}</td>
+                    <td>{{udata.name}}</td>
+                    <td>{{udata.email}}</td>
+                    <td>{{udata.address.street}}, 
+                        {{udata.address.suite}}, 
+                        {{udata.address.city}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</section>

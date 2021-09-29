@@ -1,0 +1,27 @@
+.navbar{
+    background-color: green;
+}
+
+.navbar-brand{
+    color: white;
+    font-size: 22px;
+}
+
+.navbar-light .navbar-nav .nav-link{
+    color: #fff;
+    font-size: 18px;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    color: white;
+    background-color: blue;
+}
+
+
+
+footer{
+    padding-bottom: 5px;
+    padding-top: 10px;
+    background-color: green;
+    color: white;
+}
