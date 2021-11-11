@@ -9,16 +9,20 @@
                 <th scope="col">Name</th>
                 <th scope="col">E-mail</th>
                 <th scope="col">Address</th>
+                <th scope="col">Button</th>
             </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let udata of userData">
-                    <td>{{udata.id}}</td>
+                    <td>{{udata.id}} </td>
                     <td>{{udata.name}}</td>
                     <td>{{udata.email}}</td>
                     <td>{{udata.address.street}}, 
                         {{udata.address.suite}}, 
                         {{udata.address.city}}
+                    </td>
+                    <td>
+                        <button routerLink="singleinfo/:id">view</button>
                     </td>
                 </tr>
             </tbody>

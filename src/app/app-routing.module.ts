@@ -7,6 +7,7 @@ import { GalleryComponent } from './gallery/gallery.component';
 import { PythonComponent } from './gallery/python/python.component';
 import { HomeComponent } from './home/home.component';
 import { JoinnowComponent } from './joinnow/joinnow.component';
+import { SingleUserinfoComponent } from './userinfo/single-userinfo/single-userinfo.component';
 import { UserinfoComponent } from './userinfo/userinfo.component';
 import { UsersComponent } from './users/users.component';
 
@@ -24,7 +25,10 @@ const routes: Routes = [
 {path: 'users', component:UsersComponent},
 {path: 'joinnow', component:JoinnowComponent},
 {path: 'about', component:AboutComponent},
-{path: 'userinfo', component:UserinfoComponent},
+{path:'userinfo', component:UserinfoComponent},
+{path: 'userinfo', children:[
+  {path:'singleinfo/:id', component:SingleUserinfoComponent}
+]},
 ];
 
 @NgModule({

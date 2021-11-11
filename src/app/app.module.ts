@@ -15,6 +15,7 @@ import { CreateusersComponent } from './createusers/createusers.component';
 import { AngularComponent } from './gallery/angular/angular.component';
 import { PythonComponent } from './gallery/python/python.component';
 import { UsersComponent } from './users/users.component';
+import { SingleuserService } from './userinfo/singleuser.service';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,10 @@ import { UsersComponent } from './users/users.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+
+  ],
+  providers:[
+    SingleuserService
   ],
   bootstrap: [AppComponent]
 })
